@@ -8,7 +8,7 @@
 * Bootstrap <br>
 * JavaScript <br>
 
-### Beck-end:
+### Back-end:
 * Node.js <br>
 * Express.js <br>
 * API / RESful API <br>
