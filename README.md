@@ -1,4 +1,4 @@
-# Web Developer corurse
+# Web Developer Course
 
 ## The Complete Web Development Bootcamp - Udemy: <br>
 
