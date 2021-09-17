@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb://localhost:27017/todolistDB', {
+mongoose.connect('mongodb+srv://shoval:shoval4821@cluster0.l54md.mongodb.net/ToDoList', {
   useNewUrlParser: true
 });
 
@@ -50,7 +50,7 @@ app.get("/", function(req, res) {
       res.redirect("/");
     } else {
       res.render('list', {
-        listTitle: "Today List",
+        listTitle: "Today",
         newListItems: foundItems
       });
     }
@@ -106,7 +106,9 @@ app.post("/", function(req, res) {
 app.post("/delete", function(req, res) {
   const checkedIdemId = req.body.checkbox;
   const listName = req.body.listName;
+  console.log(listName);
   if (listName === "Today") {
+    console.log(checkedIdemId);
     Item.findByIdAndRemove(checkedIdemId, function(err) {
       if (err) console.log(err);
     });
